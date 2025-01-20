@@ -11,6 +11,7 @@
 </head>
 <body> 
   <model-viewer 
+   id="model-viewer"
    src="models/130.glb"
    style="width: 100vw; height: 90vh;"
    camera-controls touch-action="pan-y"
@@ -21,6 +22,16 @@
   <button id="ar-button">Start AR</button>
 
   </model-viewer>
+
+  <script>
+    const arButton = document.querySelector('#ar-button');
+    const modelViewer = document.querySelector('#model-viewer');
+
+    // เมื่อกดปุ่ม Start AR จะทำการเปิดโหมด AR
+    arButton.addEventListener('click', () => {
+      modelViewer.enterAR();
+    });
+  </script>
 
 </body>
 </html>
