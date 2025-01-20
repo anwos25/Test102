@@ -18,30 +18,7 @@
    shadow-intensity="2" 
    ar
    ar-modes="webxr scene-viewer quick-look"  <!-- เพิ่มการกำหนดโหมด AR -->
-  >
-
-  <button id="ar-button">Start AR</button>
-
-  </model-viewer>
-
-  <script>
-    const arButton = document.querySelector('#ar-button');
-    const modelViewer = document.querySelector('#model-viewer');
-
-    // เมื่อกดปุ่ม Start AR จะทำการเปิดโหมด AR
-    arButton.addEventListener('click', () => {
-      modelViewer.enterAR();
-    });
-
-    // ซ่อนปุ่ม AR ที่ Chrome แสดงขึ้นมาเอง
-    modelViewer.addEventListener('ar-status-changed', (event) => {
-      if (event.detail.status === 'not-available') {
-        arButton.style.display = 'none';  // ซ่อนปุ่มเมื่อไม่สามารถใช้ AR ได้
-      } else {
-        arButton.style.display = 'block'; // แสดงปุ่มเมื่อสามารถใช้งาน AR ได้
-      }
-    });
-  </script>
-
+  
+ ></model-viewer>
 </body>
 </html>
